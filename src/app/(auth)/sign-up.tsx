@@ -1,5 +1,4 @@
 import { View, Text } from 'react-native'
-import React from 'react'
 import { Link } from 'expo-router'
 import SignIn from './sign-in'
 

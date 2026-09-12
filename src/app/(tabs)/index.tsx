@@ -1,12 +1,15 @@
 import { Text, View } from "react-native";
 import { Link } from "expo-router";
+import { SafeAreaView as RNSafeAreaView } from "react-native-safe-area-context";
+import { styled } from "nativewind";
 
- 
-export default function Index() {
+const SafeAreaView = styled(RNSafeAreaView);
+
+export default function App() {
   return (
-    <View className="flex-1 items-center justify-center bg-background">
+    <SafeAreaView className="flex-1 p-5 bg-background">
       <Text className="text-xl font-bold text-success">
-        Welcome to Native wind!
+        Welcome to Nativewind!
       </Text>
       <Link href="/onboarding" className="bg-primary text-white mt-4 rounded p-4">Get Started</Link>
       <Link href="/(auth)/sign-in" className="bg-primary text-white mt-4 rounded p-4">Sign In</Link>
@@ -19,6 +22,6 @@ export default function Index() {
         }}>
             Claude Max Subscription
         </Link>
-    </View>
+    </SafeAreaView>
   );
 }
